@@ -61,7 +61,7 @@ public class LineNumbersAnnotator extends ConsoleAnnotator<Object> {
 
       // Trick to make sure we wrap everything including the Timestamp from Timestamper plugin
       text.addMarkup(0, 0, "",
-          MessageFormat.format("<p class=\"line\"><a class=\"linenumber\" id=\"L{0}\" href=\"#L{0}\"></a><span>", calls));
+          MessageFormat.format("<p class=\"line\"><a class=\"linenumber\" id=\"L{0}\" href=\"?line=L{0}\"></a><span>", calls));
       text.addMarkup(end, end, "", "</span></p>");
     }
     return this;
